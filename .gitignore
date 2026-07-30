@@ -1,0 +1,27 @@
+# ── Hugo build output & cache ──
+/public/
+/resources/
+**/resources/_gen/
+.hugo_build.lock
+
+# ── Secrets / local config ──
+.env
+.env.*
+*.local.toml
+.envrc
+.direnv/
+
+# ── Editor & OS junk ──
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+.idea/
+.vscode/
+
+# ── Node (if tooling is ever added) ──
+node_modules/
+npm-debug.log*

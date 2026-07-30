@@ -1,0 +1,108 @@
+baseURL = "https://www.slemanz.com"
+title = "William Sleman"
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
+enableEmoji = true
+
+[pagination]
+pagerSize = 6
+
+[markup]
+[markup.highlight]
+noClasses = false
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "William Sleman"
+description = "Electrical Engineer | Embedded Systems, Bare-Metal Firmware, Hardware Design"
+keywords = "embedded systems, firmware, hardware, ARM, STM32, PCB, electrical engineer"
+info = ["Electrical Engineer", "Embedded Systems"]
+avatarURL = "images/avatar.jpg"
+dateFormat = "January 2, 2006"
+since = 2022
+colorScheme = "auto"
+hideColorSchemeToggle = false
+maxSeeAlsoItems = 5
+customCSS = []
+customSCSS = []
+customJS = []
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+# ── Social Links ──
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/slemanz/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 2
+url = "https://www.linkedin.com/in/slemanz/"
+
+# ══════════════════════════════════════
+# English
+# ══════════════════════════════════════
+[languages.en]
+languageName = ":uk:"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 2
+url = "projects/"
+
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 3
+url = "posts/"
+
+[[languages.en.menu.main]]
+name = "Contact"
+weight = 4
+url = "contact/"
+
+# ══════════════════════════════════════
+# Portuguese (BR)
+# ══════════════════════════════════════
+[languages.pt-br]
+languageName = ":brazil:"
+title = "William Sleman"
+
+[languages.pt-br.params]
+author = "William Sleman"
+description = "Engenheiro Eletricista | Sistemas Embarcados, Firmware Bare-Metal, Projeto de Hardware"
+keywords = "sistemas embarcados, firmware, hardware, ARM, STM32, PCB, engenheiro eletricista"
+info = ["Engenheiro Eletricista", "Sistemas Embarcados"]
+
+[[languages.pt-br.menu.main]]
+name = "Sobre"
+weight = 1
+url = "about/"
+
+[[languages.pt-br.menu.main]]
+name = "Projetos"
+weight = 2
+url = "projects/"
+
+[[languages.pt-br.menu.main]]
+name = "Blog"
+weight = 3
+url = "posts/"
+
+[[languages.pt-br.menu.main]]
+name = "Contato"
+weight = 4
+url = "contact/"
