@@ -1,0 +1,28 @@
+{
+  "name": "William Sleman",
+  "short_name": "W. Sleman",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0634fa",
+  "background_color": "#fafafa",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
