@@ -6,19 +6,19 @@ date = "2024-01-01"
 
 ## Quem sou
 
-Sou William Sleman, Engenheiro Eletricista que gosta de entender as coisas desde a base. Trabalho com sistemas embarcados, projeto de hardware e firmware bare-metal, porque quero saber o que cada registrador faz e por quê.
+Sou William Sleman, Engenheiro Eletricista. Fui parar em sistemas embarcados porque é uma área que não deixa ninguém fingir que entende: ou você sabe o que cada registrador faz, ou o hardware trata de provar que não sabe.
 
-Minha abordagem é simples: ler o datasheet, entender o periférico, escrever o driver. Sem mágica, sem caixas pretas.
+Por isso meu jeito de trabalhar é abrir o datasheet, entender o periférico e escrever o driver na mão. Dá mais trabalho do que puxar uma biblioteca pronta, mas no final não sobra caixa-preta no projeto, e quando algo quebra eu sei onde procurar.
 
-É assim que eu aprendo também. Meus projetos pessoais começaram com um LED piscando e viraram uma aplicação completa no STM32 com um bootloader UART escrito do zero. O teste que aplico é sempre o mesmo: se consigo implementar, eu entendo. Se não consigo, volto pro manual de referência.
+Foi assim que aprendi e é assim que continuo aprendendo. Meus projetos pessoais começaram com um LED piscando e hoje incluem uma aplicação completa no STM32, com bootloader UART escrito do zero. O critério não mudou: se consigo implementar, entendi. Se não consigo, é sinal de que ainda tenho o que aprender.
 
 ## O que faço
 
-Sou **Projetista de Hardware** na [Stara S.A.](https://www.stara.com.br), onde projeto ECUs e sensores para máquinas agrícolas. Minhas placas vão parar em máquinas trabalhando no campo, onde um bug de firmware não é um popup na tela: é uma máquina parada no meio da colheita.
+Sou **Engenheiro de Sistemas Embarcados** na [Stara S.A.](https://www.stara.com.br), onde projeto ECUs e sensores para máquinas agrícolas. É o tipo de trabalho que mantém a gente honesto: minhas placas vão parar em máquinas no meio da lavoura, onde um bug de firmware não é um popup na tela, é uma colheita parada.
 
-Meu dia a dia envolve o ciclo completo: captura de esquemático, seleção de componentes, layout de PCB no Altium, firmware bare-metal em C e sistemas de testes automatizados para validação.
+Cuido do ciclo inteiro, do esquemático à seleção de componentes, do layout de PCB no Altium ao firmware bare-metal em C, passando pelos sistemas de teste automatizados que validam tudo isso antes de ir pro campo.
 
-Entrei na Stara em 2022 como Estagiário de Hardware, montando protótipos e escrevendo firmware para periféricos básicos. Virei Analista de Hardware, depois Projetista, e hoje levo novos produtos de sensores do conceito ao protótipo funcionando.
+Entrei na Stara em 2022 como estagiário, soldando protótipos e escrevendo firmware para periféricos simples. De lá pra cá passei por Analista e Projetista de Hardware, e hoje levo novos produtos embarcados do conceito até o protótipo funcionando.
 
 ## Com o que trabalho
 
