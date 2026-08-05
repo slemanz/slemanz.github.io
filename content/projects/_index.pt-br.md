@@ -33,6 +33,8 @@ Ambiente de desenvolvimento bare-metal para o Renesas RA4M1 (Arduino UNO R4 Mini
 
 ### [Nina Project](https://github.com/slemanz/nina-project)
 
+![Render 3D da placa Nina, com o módulo u-blox NINA-B306, o header SWD, a porta micro-USB e o conector de expansão](/images/nina-project.png)
+
 Hardware e firmware para um dispositivo de aquisição de dados baseado no u-blox NINA-B306 (nRF52840). Ciclo completo de desenvolvimento, do esquemático à placa funcionando com firmware.
 
 **Stack:** C, nRF52840, KiCad, Makefile
@@ -44,22 +46,6 @@ Hardware e firmware para um dispositivo de aquisição de dados baseado no u-blo
 Repositório de estudo cobrindo design patterns, padrões otimizados, estruturas de dados, build systems, bootloader, safety, tratamento de falhas e TDD, tudo aplicado a C embarcado.
 
 **Tópicos:** Design Patterns, FSM, TDD, Build Systems
-
----
-
-### [Design Pattern Dump](https://github.com/slemanz/design-pattern-dump)
-
-Implementações práticas de design patterns e máquinas de estado finitas para sistemas embarcados em C, rodando em hardware real.
-
-**Stack:** C, STM32, Makefile
-
----
-
-### [F411 Sandbox](https://github.com/slemanz/F411-sandbox)
-
-Sandbox de desenvolvimento ativo para o STM32F411, onde testo novos drivers, periféricos e ideias antes de integrar em projetos maiores.
-
-**Stack:** C, STM32F411, Makefile
 
 ---
 

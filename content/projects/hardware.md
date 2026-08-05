@@ -13,65 +13,30 @@ This is what I enjoy the most: seeing something go from a schematic on screen to
 ---
 
 <!-- 
-HOW TO ADD YOUR HARDWARE PHOTOS:
+HOW TO ADD A NEW BOARD HERE:
 
-1. Put your photos in static/images/hardware/
-   Example: static/images/hardware/ecu-board-top.jpg
+1. Put the photos in static/images/hardware/
+   Example: static/images/hardware/ecu-top.jpg
 
-2. Uncomment and edit the sections below, replacing the placeholder
-   paths with your actual image filenames.
+2. Copy the "Nina Project" block below, then change the title,
+   the image path and the description.
 
-3. Each project section has space for 1-3 photos and a description.
+3. Each section works well with 1-3 photos.
 -->
-
-### ECU Development
-
-*Photos coming soon*
-
-<!-- Uncomment when you have photos:
-![ECU Board - Top View](/images/hardware/ecu-top.jpg)
-![ECU Board - Bottom View](/images/hardware/ecu-bottom.jpg)
--->
-
-Custom Electronic Control Units designed for agricultural machinery. Multi-layer PCBs with ARM Cortex-M microcontrollers, power regulation, CAN bus interfaces, and rugged connectors built to survive the field.
-
----
-
-### Sensor Boards
-
-*Photos coming soon*
-
-<!-- Uncomment when you have photos:
-![Sensor Board](/images/hardware/sensor-board.jpg)
--->
-
-Sensor acquisition boards designed from scratch, covering everything from the analog front-end to the digital processing. These go straight into production machines.
-
----
-
-### Prototype & Debug Setups
-
-*Photos coming soon*
-
-<!-- Uncomment when you have photos:
-![Workbench Setup](/images/hardware/workbench.jpg)
-![Debug Setup with J-Link](/images/hardware/debug-setup.jpg)
--->
-
-My bench where things come to life (and sometimes release magic smoke). J-Link, logic analyzer, oscilloscope, and the occasional soldering iron.
-
----
 
 ### Nina Project: Data Acquisition Device
 
-*Photos coming soon*
+![3D render of the Nina board, with the u-blox NINA-B306 module, the SWD header, the micro-USB port and the expansion connector](/images/nina-project.png)
 
-<!-- Uncomment when you have photos:
-![Nina Board](/images/hardware/nina-board.jpg)
-![Nina Schematic](/images/hardware/nina-schematic.jpg)
--->
+Complete hardware design for a data acquisition device based on the u-blox NINA-B306 (nRF52840). Designed in KiCad, from schematic to final board: power regulation, SWD debug header, USB and expansion connectors, all on a board small enough to fit in a pocket.
 
-Complete hardware design for a data acquisition device based on the u-blox NINA-B306 (nRF52840). Designed in KiCad, from schematic to final board.
+The firmware that runs on it lives in the [Nina Project repository](https://github.com/slemanz/nina-project).
+
+---
+
+### More boards coming soon
+
+There's more on the bench: sensor acquisition boards, ECU prototypes and the debug setups behind them. Photos go up here as each one comes together.
 
 ---
 
