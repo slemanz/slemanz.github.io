@@ -4,10 +4,7 @@ title = "How I Structure My Embedded Projects"
 date = "2026-03-15"
 description = "A practical look at the 5-layer architecture I use in bare-metal firmware."
 tags = [
-    "embedded",
-    "architecture",
     "firmware",
-    "C",
 ]
 categories = [
     "embedded systems",

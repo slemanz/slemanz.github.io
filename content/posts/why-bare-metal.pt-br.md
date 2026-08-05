@@ -4,10 +4,7 @@ title = "Por Que Escrevo Firmware Bare-Metal"
 date = "2026-03-01"
 description = "Sobre escolher entender o hardware ao invés de se esconder dele."
 tags = [
-    "embarcados",
-    "bare-metal",
     "firmware",
-    "filosofia",
 ]
 categories = [
     "sistemas embarcados",

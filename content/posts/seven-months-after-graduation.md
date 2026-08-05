@@ -5,9 +5,6 @@ date = "2026-03-19"
 description = "On what happens when you stop studying for exams and start studying for yourself."
 tags = [
     "career",
-    "embedded",
-    "personal",
-    "learning",
 ]
 categories = [
     "personal",

@@ -5,9 +5,6 @@ date = "2026-03-19"
 description = "Sobre o que acontece quando você para de estudar para provas e começa a estudar para si mesmo."
 tags = [
     "carreira",
-    "embarcados",
-    "pessoal",
-    "aprendizado",
 ]
 categories = [
     "pessoal",

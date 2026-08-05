@@ -4,10 +4,7 @@ title = "Why I Write Bare-Metal Firmware"
 date = "2026-03-01"
 description = "On choosing to understand the hardware instead of hiding from it."
 tags = [
-    "embedded",
-    "bare-metal",
     "firmware",
-    "philosophy",
 ]
 categories = [
     "embedded systems",

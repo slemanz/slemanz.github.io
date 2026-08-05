@@ -4,10 +4,7 @@ title = "Como Estruturo Meus Projetos Embarcados"
 date = "2026-03-15"
 description = "Um olhar prático sobre a arquitetura de 5 camadas que uso em firmware bare-metal."
 tags = [
-    "embarcados",
-    "arquitetura",
     "firmware",
-    "C",
 ]
 categories = [
     "sistemas embarcados",
