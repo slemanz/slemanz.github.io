@@ -2,7 +2,7 @@
 authors = ["William Sleman"]
 title = "Setting Up the Tools for STM32 Bare-Metal Development"
 date = "2026-11-12"
-draft = true
+draft = false
 description = "Step-by-step install of every tool used in the STM32 Embedded Fundamentals course, on Windows and Linux."
 tags = [
     "firmware",
@@ -19,8 +19,6 @@ tool we use, on Windows and on Linux, and how to check that each one works.
 
 I keep this page up to date. If a download page changed and something here doesn't
 match, tell me (contact link at the top) and I'll fix it.
-
-<!-- DRAFT: every line marked [VERIFY] must be checked on a clean machine before publishing. -->
 
 ## What you'll install
 
@@ -69,20 +67,18 @@ You'll do this several times, always the same way:
 4. **New** → paste the folder → **OK** → **OK** → **OK**.
 5. Close Git Bash and open it again.
 
-<!-- IMAGE: win-path-edit.png — the "Edit environment variable" window with the list of
-folders and the New button highlighted. -->
+![The "Edit environment variable" window: the course folders at the top, and the New button](/images/stm32-tools/win-path-edit.png)
+
+*(Screenshot from a Portuguese Windows: **Novo** is **New**.)*
 
 ### 1. Git for Windows (Git Bash)
 
 1. Go to [git-scm.com](https://git-scm.com/) → **Download for Windows** → 64-bit installer.
 2. Run it. The defaults are fine, except:
-   - **Select Components**: check **Add a Git Bash Profile to Windows Terminal**.
-     [VERIFY: name and default state of this checkbox]
+   - **Select Components**: if you see **Add a Git Bash Profile to Windows Terminal**,
+     check it.
    - **Choosing the default editor used by Git**: pick **Notepad** (the default is Vim,
      which is hard to exit if you never used it).
-
-<!-- IMAGE: win-git-components.png — Select Components, with the Windows Terminal profile
-checkbox highlighted. -->
 
 **Open Git Bash inside Windows Terminal.** Windows Terminal has a better font, tabs and
 easy copy/paste. It comes with Windows 11; on Windows 10, install it from the Microsoft
@@ -138,8 +134,10 @@ make --version    # GNU Make 3.81
    It's also on the [Arm downloads page](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads),
    under 12.3.Rel1 → Windows → AArch32 bare-metal target (arm-none-eabi).
 2. Create `C:\tools` and extract the zip there, so you get:
-   `C:\tools\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe`
-   [VERIFY: whether the zip creates a top-level folder or a double folder]
+   `C:\tools\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe`.
+   The zip already has that folder inside. In **Extract All…**, set the destination to just
+   `C:\tools`: Windows suggests a folder named after the zip, and you'd end up with the
+   name twice.
 3. Add that `bin` folder to the PATH, then reopen Git Bash.
 
 ```bash
@@ -151,8 +149,9 @@ arm-none-eabi-gcc --version   # arm-none-eabi-gcc (Arm GNU Toolchain 12.3.Rel1 (
 1. Go to [python.org](https://www.python.org/downloads/) → download the latest Python 3.
 2. On the first screen of the installer, check **Add python.exe to PATH** → **Install Now**.
 
-<!-- IMAGE: win-python-path.png — first installer screen with "Add python.exe to PATH"
-checked. -->
+![First screen of the Python installer, with "Add python.exe to PATH" checked](/images/stm32-tools/win-python-path.png)
+
+The box is **unchecked** by default. Don't skip it.
 
 ```bash
 python --version
@@ -199,27 +198,26 @@ driver and can update the firmware of the probe, which some clones need.
 2. Unzip and run `SetupSTM32CubeProgrammer_win64.exe` with the defaults. Accept the
    ST-Link driver install when it asks.
 3. Add `C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin` to the
-   PATH, then reopen Git Bash. [VERIFY: install folder]
+   PATH, then reopen Git Bash. The installer doesn't do this for you: without this step,
+   `STM32_Programmer_CLI` gives `command not found` even though the program is installed.
 
 ```bash
-STM32_Programmer_CLI --version
+STM32_Programmer_CLI --version   # STM32CubeProgrammer version: 2.23.0
 ```
-
-[VERIFY: `--version` vs `-version`]
 
 ### 9. J-Link Software (only if you have a J-Link)
 
 1. Go to [segger.com/downloads/jlink](https://www.segger.com/downloads/jlink/) →
    **J-Link Software and Documentation Pack** → Windows 64-bit installer → defaults.
-2. Add `C:\Program Files\SEGGER\JLink_V<version>` to the PATH, then reopen Git Bash.
-   [VERIFY: folder name]
+2. Add `C:\Program Files\SEGGER\JLink_V<version>` to the PATH (for example
+   `JLink_V844a`), then reopen Git Bash.
 
 ```bash
 JLink.exe
 ```
 
-It prints its version and can't find a J-Link (nothing is connected). Type `exit`.
-[VERIFY: whether it needs `winpty JLink.exe` inside Git Bash]
+It prints its version (`SEGGER J-Link Commander V8.44a` or newer) and, with no probe
+plugged in, `Cannot connect to J-Link`. That's expected. Type `exit`.
 
 ### 10. OpenOCD (xPack 0.12.0-7)
 
@@ -229,10 +227,8 @@ It prints its version and can't find a J-Link (nothing is connected). Type `exit
 3. Add `C:\tools\xpack-openocd-0.12.0-7\bin` to the PATH, then reopen Git Bash.
 
 ```bash
-openocd --version   # xPack Open On-Chip Debugger 0.12.0+dev...
+openocd --version   # xPack Open On-Chip Debugger 0.12.0+dev-02228-ge5888bda3-dirty (2025-10-04-22:44)
 ```
-
-[VERIFY: exact first line of the output]
 
 ---
 
@@ -350,7 +346,56 @@ openocd --version
 ```
 
 The package installs the udev rules for the probes, so you can flash without `sudo`.
-Version 0.11 or newer works for the course. [VERIFY: apt version on Ubuntu 22.04 / 24.04]
+Version 0.11 or newer works for the course (Ubuntu 22.04 ships 0.11, 24.04 ships 0.12).
+
+---
+
+## Git: SSH key for GitHub
+
+You don't need an account to download the course examples, but to push your own work to
+GitHub you need to prove who you are. An SSH key does that once, and you never type a
+password again. The commands are the same in Git Bash and on Linux.
+
+**1. Tell Git who you are** (this goes into every commit):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+**2. Create the key.** Use the same e-mail as your GitHub account. Press `Enter` to accept
+the default file, then type a passphrase (or leave it empty):
+
+```bash
+ssh-keygen -t ed25519 -C "you@example.com"
+```
+
+This creates two files in `~/.ssh/`: `id_ed25519` is the **private** key (never share it)
+and `id_ed25519.pub` is the **public** key, the one you give to GitHub.
+
+**3. Copy the public key:**
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Select the whole line (it starts with `ssh-ed25519`) and copy it.
+
+**4. Add it to GitHub:** **Settings** → **SSH and GPG keys** → **New SSH key** → paste →
+**Add SSH key**.
+
+**5. Test:**
+
+```bash
+ssh -T git@github.com
+```
+
+The first time it asks `Are you sure you want to continue connecting?`: type `yes`. You
+should see `Hi <your-user>! You've successfully authenticated...`. From now on, clone
+with the **SSH** URL (`git@github.com:...`), not the HTTPS one.
+
+More details (passphrase with `ssh-agent`, several keys, troubleshooting) in the official
+guide: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 ---
 
@@ -395,6 +440,7 @@ Plus PuTTY (opens, has **Serial**) and, if you have one, the J-Link (`JLink.exe`
 | `make` | 3.81 | your distro's (4.3 on Ubuntu 22.04) |
 | `python` / `python3` | 3.x | 3.x |
 | `openocd` | 0.12.0 (xPack) | 0.11 or newer |
+| `STM32_Programmer_CLI` | 2.x | — |
 
 ### If something fails
 
