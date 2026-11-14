@@ -35,8 +35,11 @@ match, tell me (contact link at the top) and I'll fix it.
 | 9 | J-Link Software | Only if you have a J-Link |
 | 10 | OpenOCD | Flashes the chip, with the ST-Link or the J-Link |
 
-**Use the same versions as the course**, especially the Arm toolchain. Same version, same
-output, same warnings, same code size.
+**Already have some of these?** An IDE, for example, often installs GCC or Make. If you
+already have a tool and it's the same version as the one listed here or newer, you can
+skip it. If you then get an error that looks nothing like the videos, install the same
+version I use and try again. Errors are part of learning, and if you fix one on your own,
+you've learned more than the lesson was teaching.
 
 ## Two ideas before you start
 

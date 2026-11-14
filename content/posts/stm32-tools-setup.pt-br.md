@@ -41,8 +41,11 @@ como aparecem num Windows em português.
 | 9 | J-Link Software | Só se você tiver um J-Link |
 | 10 | OpenOCD | Grava o chip, com o ST-Link ou com o J-Link |
 
-**Use as mesmas versões do curso**, principalmente a do toolchain da Arm. Mesma versão,
-mesma saída, mesmos warnings, mesmo tamanho de código.
+**Já tem alguma dessas ferramentas?** Uma IDE, por exemplo, muitas vezes já instala o GCC
+ou o Make. Se você já tem a ferramenta e a versão é a mesma listada aqui ou mais nova, pode
+pular. Se depois aparecer um erro muito diferente do que aparece nos vídeos, instale a mesma
+versão que eu uso e tente de novo. Erro faz parte do aprendizado, e se você resolver um por
+conta própria, aprendeu mais do que a aula ensinava.
 
 ## Duas ideias antes de começar
 
